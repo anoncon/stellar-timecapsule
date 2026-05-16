@@ -1,6 +1,6 @@
 import type { Capsule, CreateCapsulePayload } from "../types/capsule";
 
-const API_BASE = "/api";
+const API_BASE = import.meta.env.VITE_API_URL ?? "/api";
 
 async function parseResponse<T>(response: Response): Promise<T> {
   const body = (await response.json().catch(() => ({}))) as T & { error?: string };

@@ -27,7 +27,7 @@ export interface CapsuleRecord {
   events: CapsuleEvent[];
 }
 
-const storePath = resolve(process.cwd(), process.env.CAPSULE_STORE_PATH ?? "backend/data/capsules.json");
+const storePath = resolve(process.cwd(), process.env.CAPSULE_STORE_PATH ?? "data/capsules.json");
 
 function ensureStore() {
   const folder = dirname(storePath);
